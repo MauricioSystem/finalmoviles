@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Imagen del producto -->
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Imagen del producto"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nombre del producto -->
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Producto"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <!-- Descripción del producto -->
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción breve del producto"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <!-- Precio del producto -->
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$12.50"
+                android:textStyle="italic"
+                android:textColor="?android:attr/textColorPrimary" />
+        </LinearLayout>
+
+        <!-- Botón Agregar al carrito -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addToCartButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:text="Agregar"
+            android:textColor="?attr/colorPrimary" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
